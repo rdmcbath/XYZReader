@@ -1,5 +1,6 @@
 package com.example.xyzreader.ui;
 
+import android.animation.AnimatorSet;
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -45,6 +46,7 @@ public class ArticleListActivity extends AppCompatActivity implements
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
     private CoordinatorLayout mCoordinatorLayout;
+    private AnimatorSet set;
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.sss");
     // Use default locale format
@@ -58,7 +60,6 @@ public class ArticleListActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_article_list);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
 
 //        final View toolbarContainerView = findViewById(R.id.toolbar_container);
         mCoordinatorLayout = (CoordinatorLayout ) findViewById(R.id.coordinatorLayout );
